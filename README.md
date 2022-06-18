@@ -67,7 +67,7 @@ Esses mesmos números são codificados em base binária, tal como indicado na Fi
 <b>Figura 3 - </b>Representação do código da prova
 </p>
 
-A partir do modelo padrão da prova foi criado a base de dados do trabalho para atender dois cenários. O primeiro cenário digitalizou as provas em uma máquina de escaner em um ambiente totalemnte controlado. E o segundo cenário as provas foram digitalizadas pelo celular sem qualquer preocupação com luminosidade, rotação e perspectiva, ocasionando muitos ruídos em cada prova digitalizada. O maior desafio desse trabalho é a remoção desses ruídos para uma melhor detecção e leitura dos códigos da prova. A base de dados se encontra na pasta ~/provas  
+A partir do modelo padrão da prova foi criado a base de dados do trabalho para atender dois cenários. O primeiro cenário digitalizou as provas em uma máquina de escaner em um ambiente totalemnte controlado. E o segundo cenário as provas foram digitalizadas pelo celular sem qualquer preocupação com luminosidade, rotação e perspectiva, ocasionando muitos ruídos em cada prova digitalizada. O maior desafio desse trabalho é a remoção desses ruídos para uma melhor detecção e leitura dos códigos da prova. A base de dados se encontra na pasta ./exames.  
 
 Metodologia e experimentos
 ============
