@@ -43,9 +43,9 @@ Com software AMC é possivel corrigir automaticamente as folhas de respostas con
 Base de dados
 ============
 
-A base de dados desse estudo foi criada com o software AMC. Existem três tipos de provas com o mesmo conteudo, porém com as questões "embaralhada, uma forma de inibir a famosa cola.
+O modelo padrão da prova para esse estudo foi criada com o software AMC. Existem três tipos de provas com o mesmo conteudo, porém com as questões "embaralhada, uma forma de inibir a famosa cola.
 
-A Figura 2 apresenta os componentes do código de uma prova em vermelho, em verde a identificação do aluno e por último em azul o carto de resposta das questões. Na parte superior da prova (Figura 2) é possível ver o texto <b>+1/2/59+</b>, que corresponde a uma representação textual do código da prova no AMC. O código de uma prova é composto por três dados:
+A Figura 2 apresenta os componentes do código de uma prova em vermelho, em verde a identificação do aluno e por último em azul o cartão de resposta das questões. Na parte superior da prova (Figura 2) é possível ver o texto <b>+1/2/59+</b>, que corresponde a uma representação textual do código da prova no AMC. O código de uma prova é composto por três dados:
 
 • P = número da prova, p=1;    
 
@@ -66,6 +66,8 @@ Esses mesmos números são codificados em base binária, tal como indicado na Fi
 <p align = "rigth">
 <b>Figura 3 - </b>Representação do código da prova
 </p>
+
+A partir do modelo padrão da prova foi criado a base de dados do trabalho para atender dois cenários. O primeiro cenário digitalizou as provas em uma máquina de escaner em um ambiente totalemnte controlado. E o segundo cenário as provas foram digitalizadas pelo celular sem qualquer preocupação com luminosidade, rotação e perspectiva, ocasionando muitos ruídos em cada prova digitalizada. O maior desafio desse trabalho é a remoção desses ruídos para uma melhor detecção e leitura dos códigos da prova. A base de dados se encontra na pasta ~/provas  
 
 Metodologia e experimentos
 ============
