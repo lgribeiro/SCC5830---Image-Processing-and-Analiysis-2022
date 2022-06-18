@@ -4,12 +4,16 @@
 <h1 align="center"><br><br><b>Uma solução para a correção de provas digitalizadas de múltipla escolha.</b></br></br></h1>
 <h2 align="center">
   <br>Professor: 
-    <br>Moacir Antonelli Ponti.</br></br>
-  <br">Alunos:
-      <br>Luiz Ribeiro 5967710</br>
-      <br>Matheus Diniz</br>
-      <br>Connnor</br>
-
+  
+    Moacir Antonelli Ponti
+  
+  <br>Alunos:
+  
+      Connor 12119731
+      
+      Luiz Ribeiro 5967710
+      
+      Matheus Diniz 11933342
    </br>
 </h2>
 
@@ -71,7 +75,7 @@ A partir do modelo padrão da prova foi criado a base de dados do trabalho para 
 
 Metodologia e experimentos
 ============
-Para alcançar o objetivo desse trabalho, será utilizado os métodos de morfologia matemática, threshold otsu e detecção de marca óptica. Cabe salientar que tais métodos ainda etão à ser abordados no decorrer da disciplina. 
+Para alcançar o objetivo desse trabalho, será utilizado os métodos de morfologia matemática, threshold otsu e detecção de marca óptica. Cabe salientar que tais métodos ainda estão à ser abordados no decorrer da disciplina. 
 
 
 <h2 align="center"> 
