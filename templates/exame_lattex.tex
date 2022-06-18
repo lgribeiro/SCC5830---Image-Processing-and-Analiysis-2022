@@ -1,0 +1,167 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{csvsimple}%
+\usepackage{blindtext}
+\usepackage{multicol}
+\usepackage{amsmath} 
+\usepackage{amssymb}
+
+\usepackage[bloc,separateanswersheet,completemulti]{automultiplechoice}
+
+%%%%%%%%%%%%command
+\newcommand{\Test}{%
+%
+\onecopy{1}{%
+
+%%%beginning of the  header
+% Commented out - uncommenting will show the student's name.
+%\begin{center}
+%\noindent{}\fbox{\vspace*{3mm}
+%         \Large\bf\name{}~\forename{}\normalsize{}% 
+%          \vspace*{3mm}
+%      }
+%\end{center}
+
+
+\begin{center}\em
+Duration : 10 minutes.
+\end{center}
+\vspace{1ex}
+
+
+\noindent{\bf Multiple Choice Questions  \hfill TEST 1}
+\newline
+
+% Additional optional detail - commented out.
+%\vspace*{.5cm}
+%\begin{minipage}{.4\linewidth}
+%  \centering\large\bf Test\\ Examination on Jul. 12th, 2022
+%\end{minipage}
+
+
+
+%%% end of the header
+
+
+
+\restituegroupe{general}
+
+\clearpage
+
+%\AMCcleardoublepage   
+
+% \AMCaddpagesto{3}
+
+
+
+
+%%% beginning of the test sheet header:    
+
+\begin{minipage}{0.3\linewidth}   
+\noindent{
+\\
+\fbox{0}\fbox{0}\fbox{0}\fbox{0}\fbox{0}\fbox{0}\fbox{0}\fbox{0}\fbox{0}\fbox{0}\\
+\fbox{1}\fbox{1}\fbox{1}\fbox{1}\fbox{1}\fbox{1}\fbox{1}\fbox{1}\fbox{1}\fbox{1}\\
+\fbox{2}\fbox{2}\fbox{2}\fbox{2}\fbox{2}\fbox{2}\fbox{2}\fbox{2}\fbox{2}\fbox{2}\\
+\fbox{3}\fbox{3}\fbox{3}\fbox{3}\fbox{3}\fbox{3}\fbox{3}\fbox{3}\fbox{3}\fbox{3}\\
+\fbox{4}\fbox{4}\fbox{4}\fbox{4}\fbox{4}\fbox{4}\fbox{4}\fbox{4}\fbox{4}\fbox{4}\\
+\fbox{5}\fbox{5}\fbox{5}\fbox{5}\fbox{5}\fbox{5}\fbox{5}\fbox{5}\fbox{5}\fbox{5}\\
+\fbox{6}\fbox{6}\fbox{6}\fbox{6}\fbox{6}\fbox{6}\fbox{6}\fbox{6}\fbox{6}\fbox{6}\\
+\fbox{7}\fbox{7}\fbox{7}\fbox{7}\fbox{7}\fbox{7}\fbox{7}\fbox{7}\fbox{7}\fbox{7}\\
+\fbox{8}\fbox{8}\fbox{8}\fbox{8}\fbox{8}\fbox{8}\fbox{8}\fbox{8}\fbox{8}\fbox{8}\\
+\fbox{9}\fbox{9}\fbox{9}\fbox{9}\fbox{9}\fbox{9}\fbox{9}\fbox{9}\fbox{9}\fbox{9}\\
+}
+  \end{minipage}
+  \begin{minipage}{0.7\linewidth}
+  Please use a black or blue pen and completely fill in the squares.
+  For example:  $\blacksquare$. Not $\boxtimes$.\\\\
+  $\longleftarrow $ Please enter your USP number by filling in the squares to the left completely.  \textbf{If your USP number has less than 8 digits, fill in any missing values with zeroes starting from \underline{the left}.}  
+  \newline
+  \hfill \namefield{\fbox{
+	\begin{minipage}{\linewidth}
+		First Name and Last Name:
+		
+		\vspace*{.5cm}\namefielddots
+		\vspace*{1mm}
+	\end{minipage}
+}}
+  \end{minipage}
+
+
+% Optional header for the answer sheet.
+%{\large\bf Answer sheet:}
+%\begin{center}
+
+%\noindent{}\champnom{\fbox{%
+%         \Large\bf\name{}~\forename{}\normalsize{} 
+%          \vspace*{1mm}
+%      }}
+%\end{center}
+
+
+\begin{center}
+  \bf\em Answers must be given on this sheet: answers given on other sheets will not be graded.
+\end{center}
+
+
+\AMCassociation{\id}
+
+\formulaire
+
+%\AMCaddpagesto{3}
+
+}%onecopy
+}%Test
+
+\begin{document}
+
+%%%Options
+\AMCrandomseed{1237893}
+
+\def\AMCformQuestion#1{{\sc Question #1 :}}
+
+\setdefaultgroupmode{withoutreplacement}
+%%% end of Options
+
+%%% groups
+
+\element{general}{
+  \begin{question}{tobe}    
+    Conjuate the verb "to be" for the following sentence: He \textunderscore\textunderscore\textunderscore\textunderscore \, a good professor.
+    \begin{choices}
+      \correctchoice{is}
+      \wrongchoice{are}
+      \wrongchoice{am}
+      \wrongchoice{has}
+    \end{choices}
+  \end{question}
+}
+
+\element{general}{
+  \begin{question}{tohave}    
+    Conjuate the verb "to have" for the following sentence: Our school \textunderscore\textunderscore\textunderscore\textunderscore \, many classrooms.
+    \begin{choices}
+      \correctchoice{has}
+      \wrongchoice{have}
+      \wrongchoice{haves}
+      \wrongchoice{hads}
+    \end{choices}
+  \end{question}
+}
+
+\element{general}{
+  \begin{question}{many}    
+    Select the most appropriate noun for the sentence: Lions have many \textunderscore\textunderscore\textunderscore\textunderscore \, .
+    \begin{choices}
+      \correctchoice{hair}
+      \wrongchoice{friend}
+      \wrongchoice{claw}
+      \wrongchoice{admirers}
+    \end{choices}
+  \end{question}
+}
+%%% end of groups
+
+\csvreader[head to column names]{list.csv}{}{\Test}
+
+\end{document}
