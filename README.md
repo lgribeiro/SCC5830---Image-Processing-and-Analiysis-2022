@@ -9,7 +9,7 @@
   
   <br>Alunos:
   
-      Connnor 12119731
+      Connor 12119731
       
       Luiz Ribeiro 5967710
       
