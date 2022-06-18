@@ -43,7 +43,7 @@ Com software AMC é possivel corrigir automaticamente as folhas de respostas con
 Base de dados
 ============
 
-O modelo padrão da prova para esse estudo foi criada com o software AMC. Existem três tipos de provas com o mesmo conteudo, porém com as questões "embaralhada, uma forma de inibir a famosa cola.
+O modelo padrão da prova para esse estudo foi criado com o software AMC. Existem três tipos de provas com o mesmo conteúdo, porém com as questões "embaralhadas". O código em lattex e o exemplo em .pdf da prova padrão pode ser encontrado na pasta /templates.
 
 A Figura 2 apresenta os componentes do código de uma prova em vermelho, em verde a identificação do aluno e por último em azul o cartão de resposta das questões. Na parte superior da prova (Figura 2) é possível ver o texto <b>+1/2/59+</b>, que corresponde a uma representação textual do código da prova no AMC. O código de uma prova é composto por três dados:
 
