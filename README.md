@@ -9,7 +9,7 @@
   
   <br>Alunos:
   
-      Connor 12119731
+      Connor Sterrett 12119731
       
       Luiz Ribeiro 5967710
       
@@ -33,7 +33,7 @@ Tabela de conteúdos
 Introdução
 ============
 
-O objetivo deste trabalho é implementar uma solução codificada na linguagem python, usando técnicas de processamento de imagem e visão computacional para a leitura e interpretação de provas digitalizadas segundo o formato usado pelo software Auto Multiple Choice (AMC)¹. Este software auxilia o usuário a criar e gerenciar questionários de múltipla escolha (MCQ) com marcação automatizada. AMC é um software livre, distribuído sob a licença GPLv2+.
+O objetivo deste trabalho é implementar uma solução codificada na linguagem Python, usando técnicas de processamento de imagem e visão computacional para a leitura e interpretação de provas digitalizadas segundo o formato usado pelo software Auto Multiple Choice (AMC)¹. Este software auxilia o usuário a criar e gerenciar questionários de múltipla escolha (MCQ) com marcação automatizada. AMC é um software livre, distribuído sob a licença GPLv2+.
 
 
 Com software AMC é possivel corrigir automaticamente as folhas de respostas concluídas e digitalizadas de uma prova com a técnica de reconhecimento de marca óptica na folha em questão. A marca óptica (marca circular preta) é colocada nos cantos extremos como pontos de referência na folha. Uma vez detectadas as marcações dos cantos, caso necessário a rotação e perspectiva são corrigidas para a leitura das opcões assinaldas (quadradinhos pintados), permitindo assim a validação do código da prova, identificação do aluno e a correção das questões. A Figura 1 é um exemplo da página do cartão de resposta de uma prova.
@@ -47,7 +47,7 @@ Com software AMC é possivel corrigir automaticamente as folhas de respostas con
 Base de dados
 ============
 
-O modelo padrão da prova para esse estudo foi criado com o software AMC. Existem três tipos de provas com o mesmo conteúdo, porém com as questões "embaralhadas". O código em lattex e o exemplo em .pdf da prova padrão podem ser encontrados na pasta /templates.
+O modelo padrão da prova para esse estudo foi criado com o software AMC. Existem três tipos de provas com o mesmo conteúdo, porém com as questões "embaralhadas". O código em LaTeX e o exemplo em .pdf da prova padrão podem ser encontrados na pasta /templates.
 
 A Figura 2 apresenta os componentes do código de uma prova em vermelho, em verde a identificação do aluno e por último em azul o cartão de resposta das questões. Na parte superior da prova (Figura 2) é possível ver o texto <b>+1/2/59+</b>, que corresponde a uma representação textual do código da prova no AMC. O código de uma prova é composto por três dados:
 
@@ -71,7 +71,7 @@ Esses mesmos números são codificados em base binária, tal como indicado na Fi
 <b>Figura 3 - </b>Representação do código da prova
 </p>
 
-A partir do modelo padrão da prova foi criado a base de dados do trabalho para atender dois cenários. O primeiro cenário digitalizou as provas em uma máquina de escaner em um ambiente totalemnte controlado. E o segundo cenário as provas foram digitalizadas pelo celular sem qualquer preocupação com luminosidade, rotação e perspectiva, ocasionando muitos ruídos em cada prova digitalizada. O maior desafio desse trabalho é a remoção desses ruídos para uma melhor detecção e leitura dos códigos da prova. A base de dados se encontra na pasta ./exames.  
+A partir do modelo padrão da prova foi criado a base de dados do trabalho para atender dois cenários. O primeiro cenário digitalizou as provas em uma máquina de escaner em um ambiente totalmente controlado. E o segundo cenário as provas foram digitalizadas pelo celular sem qualquer preocupação com luminosidade, rotação e perspectiva, ocasionando muitos ruídos em cada prova digitalizada. O maior desafio desse trabalho é a remoção desses ruídos para uma melhor detecção e leitura dos códigos da prova. A base de dados se encontra na pasta ./exames.  
 
 Metodologia e experimentos
 ============
