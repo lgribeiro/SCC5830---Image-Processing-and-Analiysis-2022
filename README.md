@@ -112,6 +112,7 @@ Leitura e validação do código da prova
 -----
 
 Obtivemos resultado positivo para a leitura do código da prova pórem ainda precisa de ajustes, figura 5. Ainda será implementado a leitura do código usp e das respostas das alternativas. 
+
 <img src="https://user-images.githubusercontent.com/31041239/174933239-ef2bed64-4600-4a70-810b-d8ee32268594.jpeg">
 <p align = "rigth">
 <b>Figura 5 - </b>Leitura do código da prova
