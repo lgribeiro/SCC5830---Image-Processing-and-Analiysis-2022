@@ -78,10 +78,6 @@ Metodologia e experimentos
 Para alcançar o objetivo desse trabalho, será utilizado os métodos de morfologia matemática, threshold otsu e detecção de marca óptica. Cabe salientar que tais métodos ainda estão à ser abordados no decorrer da disciplina. 
 
 
-<h2 align="center"> 
-    :construction:  Projeto em construção  :construction: :hammer:
-</h2>
-
 Pré-processamento com morfologia
 -----
 Foram implementados neste trabalho os métodos de morfologia matemática dilatação, erosão, abertura e fechamento, bem como binarização e tranformação tom de cinza.
@@ -123,6 +119,10 @@ Obtivemos resultado positivo para a leitura do código da prova pórem ainda pre
 Resultados
 ============
 
+
+<h2 align="center"> 
+    :construction:  Projeto em construção  :construction: :hammer:
+</h2>
 
 Conclusão
 ============
