@@ -107,6 +107,7 @@ Essas funções retornam quase sempre mais de um blob, então o programa selcion
 <b>Figura 4 - </b>Detecção da marca óptica grifada em vermelho
 </p>
 
+
 Leitura e validação do código da prova
 -----
 
@@ -115,6 +116,7 @@ Obtivemos resultado positivo para a leitura do código da prova pórem ainda pre
 <p align = "rigth">
 <b>Figura 5 - </b>Leitura do código da prova
 </p>
+
 
 Resultados
 ============
