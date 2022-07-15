@@ -78,25 +78,54 @@ Metodologia e experimentos
 Para alcançar o objetivo desse trabalho, será utilizado os métodos de morfologia matemática, threshold otsu e detecção de marca óptica. Cabe salientar que tais métodos ainda estão à ser abordados no decorrer da disciplina. 
 
 
-<h2 align="center"> 
-    :construction:  Projeto em construção  :construction: :hammer:
-</h2>
-
 Pré-processamento com morfologia
 -----
-
+Foram implementados neste trabalho os métodos de morfologia matemática dilatação, erosão, abertura e fechamento, bem como binarização e tranformação tom de cinza.
 
 Detecção de marca ópticas
 -----
+A imagem original foi redimensionada para otimizar o tempo processamento de cada etapa, e em seguida são aplicados alguns filtros e operações morfológicas para remover ruído e realçar a marcação circular que será detectada pelo algoritmo.  
+
+Antes de todas operações a imagem foi transformada em tons de cinza e em seguida a binarização da imagem. O metodo Closing é uma dilatação seguida por erosão. Ele foi aplicado  para fechar pequenos buracos dentro dos objetos em primeiro plano ou pequenos pontos pretos na imagem. Após essa etapa permaneceu na prova apenas marcações maiores e mais realçadas.
+
+Dilatação foi aplicado para aumentar bordas e preencher buracos. O método Opening é o oposto do Closing (erosão seguida de dilatação) foi aplicado para a remoção de ruído da imagem.
+
+Após aplicação dos filtros na figura 4 verifica se poucos ruidos e blobs bem realçados. Blob significa Objeto Binário Grande, onde o termo “Grande” se concentra no objeto de um tamanho específico, e outros objetos binários “pequenos” são geralmente considerados como ruído.
+
+Foram usados os algoritmos SimpleBlobDetector e Hough Circles com a imagem pré processada, ou seja, com aplicação dos filtros e operações morfologicas. Para as etapas seguintes foi retomada a imagem original aplicando somente o método de Otsu. 
+
+A imagem foi recortada em 4 quandrantes para diminuir a area da imagem e excluir possivies marcaçoes indesejáveis na região central da imagem. Para cada quadrante executa a função que detectar Blobs. 
+
+Para o método de SimpleBlobDetector foi configurado com os parametros de circularidade e convexidade para aproximar o blob detectado de um círculo, evitando outros os blobs indesejáveis.
+
+Para o método Hough Circles que usa a Transformada Hough para achar circulos tambem foi ajustados seus parâmetros.
+
+Essas funções retornam quase sempre mais de um blob, então o programa selciona o potencial blob usando a condição de que o blob deve ter o tamanho entre 15 e 18 radius e deve ser o mais longínquo (distância euclidiana) do centro da imagem.
+
+<img src="https://user-images.githubusercontent.com/31041239/174932804-4986f821-8fa5-4f68-97a7-c6e3a35e3063.jpeg">
+<p align = "rigth">
+<b>Figura 4 - </b>Detecção da marca óptica grifada em vermelho
+</p>
 
 
 Leitura e validação do código da prova
 -----
 
+Obtivemos resultado positivo para a leitura do código da prova pórem ainda precisa de ajustes, figura 5. Ainda será implementado a leitura do código usp e das respostas das alternativas. 
+
+<img src="https://user-images.githubusercontent.com/31041239/174933239-ef2bed64-4600-4a70-810b-d8ee32268594.jpeg">
+<p align = "rigth">
+<b>Figura 5 - </b>Leitura do código da prova
+</p>
+
 
 Resultados
 ============
 
+
+<h2 align="center"> 
+    :construction:  Projeto em construção  :construction: :hammer:
+</h2>
 
 Conclusão
 ============
