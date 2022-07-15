@@ -25,6 +25,7 @@ Tabela de conteúdos
    * [Metodologia e experimentos](#metodologia-e-experimentos)
       * [Pré-processamento com morfologia](#pré-processamento-com-morfologia)
       * [Detecção de marca ópticas](#detecção-de-marca-ópticas)
+         * [Rotação e perspectiva](#rotação-e-perspectiva)
       * [Leitura e validação do código da prova](#leitura-e-validação-do-código-da-prova)
    * [Resultados](#resultados)
    * [Conclusão](#conclusão)
@@ -73,6 +74,7 @@ Esses mesmos números são codificados em base binária, tal como indicado na Fi
 
 A partir do modelo padrão da prova foi criado a base de dados do trabalho para atender dois cenários. O primeiro cenário digitalizou as provas em uma máquina de escaner em um ambiente totalmente controlado. E o segundo cenário as provas foram digitalizadas pelo celular sem qualquer preocupação com luminosidade, rotação e perspectiva, ocasionando muitos ruídos em cada prova digitalizada. O maior desafio desse trabalho é a remoção desses ruídos para uma melhor detecção e leitura dos códigos da prova. A base de dados se encontra na pasta ./exames.  
 
+
 Metodologia e experimentos
 ============
 Para alcançar o objetivo desse trabalho, será utilizado os métodos de morfologia matemática, threshold otsu e detecção de marca óptica. Cabe salientar que tais métodos ainda estão à ser abordados no decorrer da disciplina. 
@@ -108,14 +110,23 @@ Essas funções retornam quase sempre mais de um blob, então o programa selcion
 </p>
 
 
+Rotação e perspectiva
+-----
+Antes de aplicar a detecção da seção anterior, o programa faz uma verificação se a altura da imagem é maior que a largura, caso nao seja ele aplica uma rotação de 90 graus. Caso essa função é chamada pela segunda vez, a rotação será de 180 graus.
+
+A correção de perspectiva da imagem é toda amarrada na detecção dos blobs desejados, ou seja, somente irá funcionar se obtver quatro pontos da detecção. Para assim achar a matriz de rotação e translação e aplicar com o auxílio da função warpPerspective do opencv.
+
+Lembrando que detecção de blobs é feita com a imagem preprocessada com todos os filtros explicados na seção anterior, porem a correção de perspectiva é feita ma imagem original com a plicação do metodo de binarização de Otsu. A Figura 5  mostra uma imagem rotacionada e com outra perspctiva.
+
+
 Leitura e validação do código da prova
 -----
 
-Obtivemos resultado positivo para a leitura do código da prova pórem ainda precisa de ajustes, figura 5. Ainda será implementado a leitura do código usp e das respostas das alternativas. 
+Obtivemos resultado positivo para a leitura do código da prova pórem ainda precisa de ajustes, figura 6. Ainda será implementado a leitura do código usp e das respostas das alternativas. 
 
 <img src="https://user-images.githubusercontent.com/31041239/174933239-ef2bed64-4600-4a70-810b-d8ee32268594.jpeg">
 <p align = "rigth">
-<b>Figura 5 - </b>Leitura do código da prova
+<b>Figura 6 - </b>Leitura do código da prova
 </p>
 
 
