@@ -152,6 +152,6 @@ Conclusão
 
 
 Este trabalho apresentou todos os processos para criar uma solução de visão computacional e processamento de imagem para a leitura e interpretação de provas digitalizadas segundo o formato usado pelo AMC usando conceitos importante de processamento de imagem adquiridos na disciplina.
-Fato que, para a criação do programa não existe um único processo ou maneira, existem muitas possibilidades. Novas features podem ser adicionadas ao programa com a finalidade de facilitar a vida do corretor/professor, por exemplo conexão com o banco de dados para guardas as notas, contabilizar e gerar até mesmo relatório da disciplina ou de modo mais granular por aluno.. 
+Fato que, para a criação do programa não existe um único processo ou maneira, existem muitas possibilidades e foi apresentado uma delas. Novas features podem ser adicionadas ao programa com a finalidade de facilitar a vida do professor, como por exemplo conexão com o banco de dados para guardar as notas, contabilizá-las e gerar relatório da disciplina ou de modo mais granular por aluno.
 
 ¹ https://www.auto-multiple-choice.net/index.en
