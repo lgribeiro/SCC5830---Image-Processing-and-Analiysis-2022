@@ -137,7 +137,7 @@ Canto superior esquerdo → (x,y) = (W*%, W*(%))
 Canto inferior direito → (x,y) = (W*%, W*(%))
 
 Esse retângulo maior foi subdivido em 12 partes e diminuindo um pouco a sua area para que ele seja contido pela sua caixa mais afora, todo cálculo  é feito sobre W. O mesmo foi feito para a caixa de leitura do número USP. Essas áreas (caixas subdividas) serão usada para verificar ausência ou presença de pixel preto. Se o número de pixels pretos forem maior que o número de pixels brancos
-então essa posição recebe o valor 1. Importante pensar esses retângulos como matrizes, assim  é identificável pela posição (posição da matriz para o numero Usp) e na conversão de binário pra decimal para a leitura e validação do código da prova. A Figura 6 apesar de binarizada  ́e possivel perceber como os subretângulos são desenhados.
+então essa posição recebe o valor 1. Importante pensar esses retângulos como matrizes, assim  é identificável pela posição (posição da matriz para o numero Usp) e na conversão de binário pra decimal para a leitura e validação do código da prova. A Figura 6 apesar de binarizada é possível perceber como os subretângulos são desenhados.
 
 Resultados
 ============
@@ -149,5 +149,9 @@ Resultados
 
 Conclusão
 ============
+
+
+Este trabalho apresentou todos os processos para criar uma solução de visão computacional e processamento de imagem para a leitura e interpretação de provas digitalizadas segundo o formato usado pelo AMC usando conceitos importante de processamento de imagem adquiridos na disciplina.
+Fato que, para a criação do programa não existe um único processo ou maneira, existem muitas possibilidades. E há muitas possibilidades de melhoria deste programa adicionando novas features que possam inibir erros de identificação e correção das questões aumenta a sua confiabilidade.
 
 ¹ https://www.auto-multiple-choice.net/index.en
