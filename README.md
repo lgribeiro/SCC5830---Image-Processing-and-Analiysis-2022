@@ -139,10 +139,17 @@ então essa posição recebe o valor 1. Importante pensar esses retângulos como
 Resultados
 ============
 
+  Nosso algoritmo foi capaz de realizar a identificação dos marcadores óticos e consequentemente a leitura dos códigos da prova e matricula do aluno em provas standard como na figura 7, porém devido a presença de muitos ruidos de luminancia nas provas fotografadas por celulares, não foi possivel realizar a identificação dos marcadores óticos e consequentemente a leitura dos dados como na figura 8.
+  
+<img src="https://user-images.githubusercontent.com/12867263/179426860-3d084f4b-5d40-4b50-9505-0d75199754a6.png">
+<p align = "rigth">
+<b>Figura 7 - </b>Prova standard - resultado correto.
+</p>
 
-<h2 align="center"> 
-  Nosso algoritmo foi capaz de realizar a identificação dos marcadores óticos e consequentemente a leitura dos códigos da prova e matricula do aluno em provas standard, porém devido a presença de muitos ruidos  de luminancia nas provas fotografadas por celulares, não foi possivel realizar a identificação dos marcadores óticos e consequentemente a leitura dos dados.
-</h2>
+<img src="https://user-images.githubusercontent.com/12867263/179426857-7ba06d52-c11e-4146-b9d2-be0bc2cac9a5.png">
+<p align = "rigth">
+<b>Figura 8 - </b>Prova foto - erro nas marcas ópticas.
+</p>
 
 Conclusão
 ============
