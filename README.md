@@ -25,6 +25,7 @@ Tabela de conteúdos
    * [Metodologia e experimentos](#metodologia-e-experimentos)
       * [Pré-processamento com morfologia](#pré-processamento-com-morfologia)
       * [Detecção de marca ópticas](#detecção-de-marca-ópticas)
+         * [Rotação e perspectiva](#rotação-e-perspectiva)
       * [Leitura e validação do código da prova](#leitura-e-validação-do-código-da-prova)
    * [Resultados](#resultados)
    * [Conclusão](#conclusão)
@@ -73,6 +74,7 @@ Esses mesmos números são codificados em base binária, tal como indicado na Fi
 
 A partir do modelo padrão da prova foi criado a base de dados do trabalho para atender dois cenários. O primeiro cenário digitalizou as provas em uma máquina de escaner em um ambiente totalmente controlado. E o segundo cenário as provas foram digitalizadas pelo celular sem qualquer preocupação com luminosidade, rotação e perspectiva, ocasionando muitos ruídos em cada prova digitalizada. O maior desafio desse trabalho é a remoção desses ruídos para uma melhor detecção e leitura dos códigos da prova. A base de dados se encontra na pasta ./exames.  
 
+
 Metodologia e experimentos
 ============
 Para alcançar o objetivo desse trabalho, será utilizado os métodos de morfologia matemática, threshold otsu e detecção de marca óptica. Cabe salientar que tais métodos ainda estão à ser abordados no decorrer da disciplina. 
@@ -113,16 +115,34 @@ Essas funções retornam quase sempre mais de um blob, então o programa selcion
 </p>
 
 
+Rotação e perspectiva
+-----
+Antes de aplicar a detecção da seção anterior, o programa faz uma verificação se a altura da imagem é maior que a largura, caso nao seja ele aplica uma rotação de 90 graus. Caso essa função é chamada pela segunda vez, a rotação será de 180 graus.
+
+A correção de perspectiva da imagem é toda amarrada na detecção dos blobs desejados, ou seja, somente irá funcionar se obtver quatro pontos da detecção. Para assim achar a matriz de rotação e translação e aplicar com o auxílio da função warpPerspective do opencv.
+
+Lembrando que detecção de blobs é feita com a imagem preprocessada com todos os filtros explicados na seção anterior, porem a correção de perspectiva é feita ma imagem original com a plicação do metodo de binarização de Otsu. A Figura 5  mostra uma imagem rotacionada e com outra perspctiva.
+
+
 Leitura e validação do código da prova
 -----
-
-Obtivemos resultado positivo para a leitura do código da prova pórem ainda precisa de ajustes, figura 5. Ainda será implementado a leitura do código usp e das respostas das alternativas. 
 
 <img src="https://user-images.githubusercontent.com/31041239/174933239-ef2bed64-4600-4a70-810b-d8ee32268594.jpeg">
 <p align = "rigth">
 <b>Figura 6 - </b>Leitura do código da prova
 </p>
 
+
+Com rotação corrigida todas as coordenadas das marcações para leitura são calculas a partir da distância em pixels entre as duas marcações circulares (W) no topo da prova, aquelas retornadas pelo metodo de detecção de blobs. Exemplificando, o retângulo (Figura 2) do número da prova foi encontrado com o seguinte cálculo.
+
+Retângulo vermelho superior:
+
+Canto superior esquerdo → (x,y) = (W*%, W*(%))
+
+Canto inferior direito → (x,y) = (W*%, W*(%))
+
+Esse retângulo maior foi subdivido em 12 partes e diminuindo um pouco a sua area para que ele seja contido pela sua caixa mais afora, todo cálculo  é feito sobre W. O mesmo foi feito para a caixa de leitura do número USP. Essas áreas (caixas subdividas) serão usada para verificar ausência ou presença de pixel preto. Se o número de pixels pretos forem maior que o número de pixels brancos
+então essa posição recebe o valor 1. Importante pensar esses retângulos como matrizes, assim  é identificável pela posição (posição da matriz para o numero Usp) e na conversão de binário pra decimal para a leitura e validação do código da prova. A Figura 6 apesar de binarizada é possível perceber como os subretângulos são desenhados.
 
 Resultados
 ============
@@ -134,5 +154,9 @@ Resultados
 
 Conclusão
 ============
+
+
+Este trabalho apresentou todos os processos para criar uma solução de visão computacional e processamento de imagem para a leitura e interpretação de provas digitalizadas segundo o formato usado pelo AMC usando conceitos importante de processamento de imagem adquiridos na disciplina.
+Fato que, para a criação do programa não existe um único processo ou maneira, existem muitas possibilidades e foi apresentado uma delas. Novas features podem ser adicionadas ao programa com a finalidade de facilitar a vida do professor, como por exemplo conexão com o banco de dados para guardar as notas, contabilizá-las e gerar relatório da disciplina ou de modo mais granular por aluno.
 
 ¹ https://www.auto-multiple-choice.net/index.en
