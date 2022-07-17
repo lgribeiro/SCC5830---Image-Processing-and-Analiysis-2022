@@ -141,7 +141,7 @@ Resultados
 
 
 <h2 align="center"> 
-    :construction:  Projeto em construção  :construction: :hammer:
+  Nosso algoritmo foi capaz de realizar a identificação dos marcadores óticos e consequentemente a leitura dos códigos da prova e matricula do aluno em provas standard, porém devido a presença de muitos ruidos  de luminancia nas provas fotografadas por celulares, não foi possivel realizar a identificação dos marcadores óticos e consequentemente a leitura dos dados.
 </h2>
 
 Conclusão
