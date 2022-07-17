@@ -82,7 +82,12 @@ Para alcançar o objetivo desse trabalho, será utilizado os métodos de morfolo
 
 Pré-processamento com morfologia
 -----
-Foram implementados neste trabalho os métodos de morfologia matemática dilatação, erosão, abertura e fechamento, bem como binarização e tranformação tom de cinza.
+Foram implementados neste trabalho os métodos de morfologia matemática dilatação e erosão, bem como tranformação tom de cinza e binarização usando o método Otsu.   Para decidir qual método de mofologia será usado, um comparação foi feito olhando a mudança das marcas ópticas e o preenchimento do exame.  Foi decidido usar o metodo de opening (erosion > dilation) + dilation + dilation.
+<img src="https://user-images.githubusercontent.com/12867263/179374646-47dc39a4-530a-4c43-8152-f3315049f6ba.png">
+<p align = "rigth">
+<b>Figura 4 - </b>Comparação das métodos de morfologia
+</p>
+
 
 Detecção de marca ópticas
 -----
@@ -106,7 +111,7 @@ Essas funções retornam quase sempre mais de um blob, então o programa selcion
 
 <img src="https://user-images.githubusercontent.com/31041239/174932804-4986f821-8fa5-4f68-97a7-c6e3a35e3063.jpeg">
 <p align = "rigth">
-<b>Figura 4 - </b>Detecção da marca óptica grifada em vermelho
+<b>Figura 5 - </b>Detecção da marca óptica grifada em vermelho
 </p>
 
 
