@@ -77,12 +77,12 @@ A partir do modelo padrão da prova foi criado a base de dados do trabalho para 
 
 Metodologia e experimentos
 ============
-Para alcançar o objetivo desse trabalho, será utilizado os métodos de morfologia matemática, threshold otsu e detecção de marca óptica. Cabe salientar que tais métodos ainda estão à ser abordados no decorrer da disciplina. 
+Para alcançar o objetivo desse trabalho, será utilizado os métodos de morfologia matemática, threshold otsu e detecção de marca óptica.
 
 
 Pré-processamento com morfologia
 -----
-Foram implementados neste trabalho os métodos de morfologia matemática dilatação e erosão, bem como tranformação tom de cinza e binarização usando o método Otsu.   Para decidir qual método de mofologia será usado, um comparação foi feito olhando a mudança das marcas ópticas e o preenchimento do exame.  Foi decidido usar o metodo de opening (erosion > dilation) + dilation + dilation.
+Foram implementados neste trabalho os métodos de morfologia matemática dilatação e erosão, bem como tranformação tom de cinza e binarização usando o método Otsu.  Para decidir qual método de mofologia será usado, uma comparação foi feita olhando a mudança das marcas ópticas e o preenchimento do exame.  Foi decidido usar o metodo de opening (erosion > dilation) + dilation + dilation.
 <img src="https://user-images.githubusercontent.com/12867263/179374646-47dc39a4-530a-4c43-8152-f3315049f6ba.png">
 <p align = "rigth">
 <b>Figura 4 - </b>Comparação das métodos de morfologia
@@ -93,9 +93,7 @@ Detecção de marca ópticas
 -----
 A imagem original foi redimensionada para otimizar o tempo processamento de cada etapa, e em seguida são aplicados alguns filtros e operações morfológicas para remover ruído e realçar a marcação circular que será detectada pelo algoritmo.  
 
-Antes de todas operações a imagem foi transformada em tons de cinza e em seguida a binarização da imagem. O metodo Closing é uma dilatação seguida por erosão. Ele foi aplicado  para fechar pequenos buracos dentro dos objetos em primeiro plano ou pequenos pontos pretos na imagem. Após essa etapa permaneceu na prova apenas marcações maiores e mais realçadas.
-
-Dilatação foi aplicado para aumentar bordas e preencher buracos. O método Opening é o oposto do Closing (erosão seguida de dilatação) foi aplicado para a remoção de ruído da imagem.
+Antes de todas operações a imagem foi transformada em tons de cinza e em seguida a binarização da imagem. A operação morfológica de dilatação foi aplicado para aumentar bordas e preencher buracos porém antes foi aplicado a operação morfológica opening (é o processo de erosão seguida de dilatação) para a remoção de ruídos da imagem.
 
 Após aplicação dos filtros na figura 4 verifica se poucos ruidos e blobs bem realçados. Blob significa Objeto Binário Grande, onde o termo “Grande” se concentra no objeto de um tamanho específico, e outros objetos binários “pequenos” são geralmente considerados como ruído.
 
