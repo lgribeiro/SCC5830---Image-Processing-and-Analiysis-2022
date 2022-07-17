@@ -131,13 +131,7 @@ Leitura e validação do código da prova
 </p>
 
 
-Com rotação corrigida todas as coordenadas das marcações para leitura são calculas a partir da distância em pixels entre as duas marcações circulares (W) no topo da prova, aquelas retornadas pelo metodo de detecção de blobs. Exemplificando, o retângulo (Figura 2) do número da prova foi encontrado com o seguinte cálculo.
-
-Retângulo vermelho superior:
-
-Canto superior esquerdo → (x,y) = (W*%, W*(%))
-
-Canto inferior direito → (x,y) = (W*%, W*(%))
+Com rotação corrigida todas as coordenadas das marcações para leitura são calculas a partir da distância em pixels entre as duas marcações circulares (W) no topo da prova, aquelas retornadas pelo metodo de detecção de blobs.
 
 Esse retângulo maior foi subdivido em 12 partes e diminuindo um pouco a sua area para que ele seja contido pela sua caixa mais afora, todo cálculo  é feito sobre W. O mesmo foi feito para a caixa de leitura do número USP. Essas áreas (caixas subdividas) serão usada para verificar ausência ou presença de pixel preto. Se o número de pixels pretos forem maior que o número de pixels brancos
 então essa posição recebe o valor 1. Importante pensar esses retângulos como matrizes, assim  é identificável pela posição (posição da matriz para o numero Usp) e na conversão de binário pra decimal para a leitura e validação do código da prova. A Figura 6 apesar de binarizada é possível perceber como os subretângulos são desenhados.
